@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Courses</title>
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+/* ===== Page Title ===== */
+.course-hero{
+  text-align:center;
+  padding:80px 40px;
+}
+
+.course-hero h1{
+  font-size:42px;
+  background:linear-gradient(90deg,#38bdf8,#facc15,#22c55e);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.course-hero p{
+  color:#94a3b8;
+  font-size:18px;
+}
+
+/* ===== Course Grid ===== */
+.course-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
+  padding:60px 40px;
+}
+
+/* ===== Course Card ===== */
+.course-card{
+  border-radius:22px;
+  overflow:hidden;
+  animation:fadeUp .9s ease;
+  transition:.4s;
+  position:relative;
+}
+
+.course-card:hover{
+  transform:translateY(-14px) scale(1.02);
+  box-shadow:0 0 35px rgba(255,255,255,.25);
+}
+
+/* ===== Card Image ===== */
+.course-card img{
+  width:100%;
+  height:170px;
+  object-fit:cover;
+}
+
+/* ===== Card Body ===== */
+.course-body{
+  padding:22px;
+  background:white;
+  color:#020617;
+}
+
+.course-body h3{
+  margin-top:0;
+}
+
+.course-body p{
+  font-size:14px;
+  color:#475569;
+}
+
+/* ===== Footer ===== */
+.course-footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:15px;
+}
+
+.price{
+  font-weight:700;
+  color:#16a34a;
+}
+
+.btn{
+  padding:8px 18px;
+  border:none;
+  border-radius:18px;
+  font-size:13px;
+  cursor:pointer;
+  background:#020617;
+  color:white;
+}
+
+/* ===== Color Variants ===== */
+.c1{background:linear-gradient(135deg,#fde68a,#facc15);}
+.c2{background:linear-gradient(135deg,#93c5fd,#38bdf8);}
+.c3{background:linear-gradient(135deg,#bbf7d0,#22c55e);}
+.c4{background:linear-gradient(135deg,#fda4af,#f43f5e);}
+.c5{background:linear-gradient(135deg,#ddd6fe,#8b5cf6);}
+.c6{background:linear-gradient(135deg,#fecaca,#fb7185);}
+
+/* ===== Animations ===== */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar">
+  <a href="../index.html">⬅ Back</a>
+</nav>
+
+<!-- HERO -->
+<section class="course-hero">
+  <h1>Courses from Expert Instructors</h1>
+  <p>AI & ML · Web Development · Cloud · Cyber Security</p>
+</section>
+
+<!-- COURSES -->
+<section class="course-grid">
+
+  <div class="course-card c1">
+    <img src="../assets/python.jpg">
+    <div class="course-body">
+      <h3>Python Programming</h3>
+      <p>Master Python from basics to real-world applications.</p>
+      <div class="course-footer">
+        <span class="price">₹1,999</span>
+        <button class="btn">View Course</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-card c2">
+    <img src="../assets/ai.jpg">
+    <div class="course-body">
+      <h3>AI & Machine Learning</h3>
+      <p>Learn ML models, algorithms, and data intelligence.</p>
+      <div class="course-footer">
+        <span class="price">₹3,499</span>
+        <button class="btn">View Course</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-card c3">
+    <img src="../assets/web.jpg">
+    <div class="course-body">
+      <h3>Full Stack Web</h3>
+      <p>HTML, CSS, JS, React, and backend development.</p>
+      <div class="course-footer">
+        <span class="price">₹2,499</span>
+        <button class="btn">View Course</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-card c4">
+    <img src="../assets/cloud.jpg">
+    <div class="course-body">
+      <h3>Cloud Computing</h3>
+      <p>AWS, Azure, DevOps fundamentals & deployment.</p>
+      <div class="course-footer">
+        <span class="price">₹2,999</span>
+        <button class="btn">View Course</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-card c5">
+    <img src="../assets/cyber.jpg">
+    <div class="course-body">
+      <h3>Cyber Security</h3>
+      <p>Ethical hacking, network security & SOC basics.</p>
+      <div class="course-footer">
+        <span class="price">₹3,199</span>
+        <button class="btn">View Course</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-card c6">
+    <img src="../assets/data.jpg">
+    <div class="course-body">
+      <h3>Data Science</h3>
+      <p>Data analysis, visualization & predictive models.</p>
+      <div class="course-footer">
+        <span class="price">₹3,799</span>
+        <button class="btn">View Course</button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+© 2025 E2E SkyLearn
+</footer>
+
+</body>
+</html>

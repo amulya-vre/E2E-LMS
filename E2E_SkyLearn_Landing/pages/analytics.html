@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Analytics</title>
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+/* ===== Page base ===== */
+body{
+  background:linear-gradient(180deg,#020617,#020617);
+}
+
+/* ===== Intro Section ===== */
+.analytics-info{
+  padding:70px 40px;
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  animation:fadeUp 1.2s ease;
+}
+
+.analytics-info h2{
+  font-size:38px;
+  background:linear-gradient(90deg,#38bdf8,#22c55e);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.analytics-info p{
+  font-size:18px;
+  color:#94a3b8;
+  line-height:1.7;
+}
+
+/* ===== Hero Image Section ===== */
+.analytics-hero{
+  margin:80px 40px;
+  border-radius:26px;
+  background:
+    linear-gradient(135deg,rgba(56,189,248,.4),rgba(34,197,94,.4)),
+    url("../assets/analytics.jpg");
+  background-size:cover;
+  background-position:center;
+  padding:110px 40px;
+  position:relative;
+  overflow:hidden;
+  animation:zoomFade 1.4s ease;
+}
+
+.analytics-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(2,6,23,0.65);
+}
+
+.analytics-hero h2,
+.analytics-hero p{
+  position:relative;
+  z-index:1;
+}
+
+.analytics-hero h2{
+  font-size:48px;
+  color:white;
+}
+
+.analytics-hero p{
+  max-width:600px;
+  font-size:18px;
+  color:#e5e7eb;
+}
+
+/* ===== Cards ===== */
+.analytics-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  padding:70px 40px;
+}
+
+.analytics-card{
+  background:linear-gradient(180deg,#0f172a,#020617);
+  padding:30px;
+  border-radius:18px;
+  border:1px solid rgba(56,189,248,.25);
+  transition:all .4s ease;
+  animation:floatIn .8s ease forwards;
+}
+
+.analytics-card:hover{
+  transform:translateY(-12px) scale(1.02);
+  box-shadow:0 0 35px rgba(56,189,248,.45);
+  border-color:#38bdf8;
+}
+
+.analytics-card h3{
+  margin-top:0;
+  color:#38bdf8;
+}
+
+.analytics-card p{
+  color:#94a3b8;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes zoomFade{
+  from{opacity:0;transform:scale(.95)}
+  to{opacity:1;transform:scale(1)}
+}
+
+@keyframes floatIn{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="../index.html">⬅ Back</a>
+</nav>
+
+<!-- SECTION 1 -->
+<section class="analytics-info">
+  <h2>Learning Analytics</h2>
+  <p>
+    E2E SkyLearn Analytics delivers real-time insights into learner
+    performance, engagement, and skill progression. It empowers
+    institutions and organizations to make data-driven academic
+    decisions.
+  </p>
+</section>
+
+<!-- SECTION 2 -->
+<section class="analytics-hero">
+  <h2>Data-Driven Learning Insights</h2>
+  <p>
+    Visualize progress, detect skill gaps, and optimize course
+    effectiveness using AI-powered analytics dashboards.
+  </p>
+</section>
+
+<!-- SECTION 3 -->
+<section class="analytics-cards">
+  <div class="analytics-card">
+    <h3>Performance Tracking</h3>
+    <p>Monitor scores, completion rates, and learning outcomes.</p>
+  </div>
+
+  <div class="analytics-card">
+    <h3>Engagement Metrics</h3>
+    <p>Analyze time spent, interactions, and learning behavior.</p>
+  </div>
+
+  <div class="analytics-card">
+    <h3>Skill Gap Analysis</h3>
+    <p>Identify weak areas and recommend personalized content.</p>
+  </div>
+
+  <div class="analytics-card">
+    <h3>Visual Dashboards</h3>
+    <p>Interactive dashboards for students, faculty, and admins.</p>
+  </div>
+</section>
+
+<footer>
+© 2025 E2E SkyLearn
+</footer>
+
+</body>
+</html>

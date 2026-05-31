@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart Courses</title>
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+/* extra styling only for this page */
+.smart-info{
+  padding:60px 40px;
+  text-align:center;
+  max-width:900px;
+  margin:auto;
+}
+
+.smart-info h2{
+  font-size:36px;
+  color:#38bdf8;
+}
+
+.smart-info p{
+  color:#94a3b8;
+  font-size:18px;
+  line-height:1.7;
+}
+
+/* card-style section (image 1 inspired) */
+.smart-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  padding:60px 40px;
+}
+
+.smart-card{
+  background:#ffffff;
+  color:#020617;
+  border-radius:16px;
+  padding:30px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+.smart-card h3{
+  margin-top:0;
+}
+
+/* python banner (image 2 inspired) */
+.python-course{
+  margin:80px 40px;
+  border-radius:24px;
+  background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url("../assets/python.jpg");
+  background-size:cover;
+  background-position:center;
+  padding:100px 40px;
+  text-align:left;
+}
+
+.python-course h2{
+  font-size:48px;
+  color:#ffffff;
+}
+
+.python-course p{
+  max-width:600px;
+  font-size:18px;
+  color:#e5e7eb;
+}
+
+.python-course button{
+  margin-top:20px;
+  padding:12px 28px;
+  border:none;
+  border-radius:25px;
+  background:#facc15;
+  color:#020617;
+  font-weight:600;
+  cursor:pointer;
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="../index.html">⬅ Back</a>
+</nav>
+
+<!-- SECTION 1: SMART COURSE INFO -->
+<section class="smart-info">
+  <h2>Smart Courses</h2>
+  <p>
+    Smart Courses at E2E SkyLearn use AI-driven learning paths,
+    adaptive content delivery, and micro-learning modules.
+    The platform analyzes learner behavior and automatically
+    recommends personalized courses to bridge skill gaps
+    efficiently.
+  </p>
+</section>
+
+<!-- SECTION 2: SMART COURSE FEATURES (LIKE IMAGE 1) -->
+<section class="smart-cards">
+  <div class="smart-card">
+    <h3>Conversational Learning</h3>
+    <p>Ask questions and get instant AI-powered explanations.</p>
+  </div>
+
+  <div class="smart-card">
+    <h3>Adaptive Paths</h3>
+    <p>Courses automatically adjust based on learner progress.</p>
+  </div>
+
+  <div class="smart-card">
+    <h3>Skill Analytics</h3>
+    <p>Track strengths, weaknesses, and performance insights.</p>
+  </div>
+</section>
+
+<!-- SECTION 3: PYTHON COURSE (LIKE IMAGE 2) -->
+<section class="python-course">
+  <h2>Python Programming</h2>
+  <p>
+    Learn Python from basics to advanced concepts including
+    data structures, automation, and real-world applications.
+    Designed for beginners and professionals.
+  </p>
+  <button>View Python Course</button>
+</section>
+
+<footer>
+© 2025 E2E SkyLearn
+</footer>
+
+</body>
+</html>

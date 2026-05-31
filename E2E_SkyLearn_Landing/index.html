@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E2E SkyLearn</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ===== BASE ===== */
+body{
+  background:#020617;
+  overflow-x:hidden;
+}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;
+  min-height:95vh;
+  display:flex;
+  align-items:center;
+  padding:0 90px;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(56,189,248,.35),
+      rgba(34,197,94,.30),
+      rgba(239,68,68,.18),
+      rgba(139,92,246,.20)
+    ),
+    url("assets/hero.gif");
+  background-size:cover;
+  background-position:center;
+}
+
+/* dark overlay for readability */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(2,6,23,.65);
+}
+
+.hero-content{
+  position:relative;
+  max-width:680px;
+  z-index:2;
+  animation:fadeUp 1.4s ease;
+}
+
+.hero h1{
+  font-family:'Poppins', sans-serif;
+  font-size:60px;
+  line-height:1.1;
+  letter-spacing:-1px;
+
+  background:linear-gradient(
+    120deg,
+    #38bdf8,
+    #22c55e,
+    #facc15,
+    #ef4444,
+    #8b5cf6
+  );
+  background-size:300% 300%;
+  animation:gradientMove 6s ease infinite;
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  text-shadow:
+    0 0 10px rgba(56,189,248,.35),
+    0 0 25px rgba(34,197,94,.25);
+}
+@keyframes gradientMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.hero p{
+  font-family:'Inter', sans-serif;
+  font-size:21px;
+  color:#d1d5db;
+  margin:26px 0 38px;
+  max-width:620px;
+}/* ===== CTA ===== */
+.cta button{
+  padding:15px 38px;
+  border-radius:32px;
+  border:none;
+  font-size:16px;
+  cursor:pointer;
+  margin-right:14px;
+  transition:.45s;
+}
+
+/* primary */
+.cta button:first-child{
+  background:linear-gradient(90deg,#38bdf8,#22c55e);
+  color:#020617;
+  box-shadow:0 0 25px rgba(56,189,248,.6);
+}
+
+.cta button:first-child:hover{
+  transform:translateY(-6px) scale(1.03);
+  box-shadow:0 0 40px rgba(56,189,248,.9);
+}
+
+/* secondary */
+.cta .outline{
+  background:transparent;
+  border:2px solid #facc15;
+  color:#facc15;
+}
+
+.cta .outline:hover{
+  background:#facc15;
+  color:#020617;
+}
+
+/* ===== FEATURES ===== */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:34px;
+  padding:120px 70px;
+}
+
+.feature-card{
+  background:linear-gradient(180deg,#0f172a,#020617);
+  padding:38px;
+  border-radius:24px;
+  text-align:center;
+  text-decoration:none;
+  color:white;
+  transition:.45s;
+  animation:fadeUp .9s ease;
+  border:1px solid rgba(148,163,184,.25);
+}
+
+.feature-card:hover{
+  transform:translateY(-18px) scale(1.04);
+  box-shadow:0 0 45px rgba(56,189,248,.45);
+  border-color:#38bdf8;
+}
+
+.feature-card h3{
+  margin:18px 0 10px;
+  background:linear-gradient(
+    90deg,
+    #38bdf8,
+    #22c55e,
+    #ef4444
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ===== STATS ===== */
+.stats{
+  display:flex;
+  justify-content:space-around;
+  padding:95px 40px;
+  background:linear-gradient(
+    90deg,
+    #020617,
+    #0f172a,
+    #020617
+  );
+}
+
+.stats div{
+  text-align:center;
+  animation:pulse 6s infinite alternate;
+}
+
+.stats h2{
+  font-size:44px;
+  background:linear-gradient(
+    90deg,
+    #22c55e,
+    #38bdf8,
+    #facc15,
+    #ef4444
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.stats p{
+  color:#94a3b8;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(45px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes pulse{
+  from{transform:scale(1)}
+  to{transform:scale(1.06)}
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">E2E <span>SkyLearn</span></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="pages/smart.html">Smart Courses</a>
+    <a href="pages/courses.html">Courses</a>
+    <a href="pages/certifications.html">Certifications</a>
+    <a href="pages/analytics.html">Analytics</a>
+    <a href="http://127.0.0.1:8000/">Login</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>
+  End-to-End Smart<br>
+  Learning Platform
+</h1>
+    <p>
+      A modern AI-powered LMS delivering adaptive learning,
+      intelligent analytics, and industry-ready certifications.
+    </p>
+    <div class="cta">
+      <button onclick="window.location.href='pages/courses.html'">
+        Explore Courses
+      </button>
+      <button class="outline"
+        onclick="window.location.href='http://127.0.0.1:8000/'">
+        Get Started
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <a href="pages/smart.html" class="feature-card">
+    📘
+    <h3>Smart Courses</h3>
+    <p>AI-driven adaptive learning paths</p>
+  </a>
+
+  <a href="pages/analytics.html" class="feature-card">
+    📊
+    <h3>Analytics</h3>
+    <p>Data-driven performance insights</p>
+  </a>
+
+  <a href="pages/certifications.html" class="feature-card">
+    🏆
+    <h3>Certifications</h3>
+    <p>Industry-recognized credentials</p>
+  </a>
+
+  <a href="pages/courses.html" class="feature-card">
+    🎮
+    <h3>Gamified Learning</h3>
+    <p>Engaging & interactive experiences</p>
+  </a>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div>
+    <h2>12,000+</h2>
+    <p>Students</p>
+  </div>
+  <div>
+    <h2>120+</h2>
+    <p>Courses</p>
+  </div>
+  <div>
+    <h2>8,500+</h2>
+    <p>Certificates</p>
+  </div>
+</section>
+
+<footer>
+© 2025 E2E SkyLearn
+</footer>
+
+</body>
+</html>

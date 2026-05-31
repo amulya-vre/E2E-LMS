@@ -1,0 +1,45 @@
+cd E:\dsa\SkyLearn-main\SkyLearn-main 
+conda create -n skylearn python=3.10 -y
+conda activate skylearn
+pip install -r requirements.txt
+pip install django cloudinary pillow django-allauth
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+
+
+add staff :
+python manage.py shell
+from django.contrib.auth.models import User
+
+u = User.objects.get(username="lec-2026-3")
+u.set_password("lecturer@123")
+u.save()
+
+exit()
+
+
+ from accounts.models import User
+>>> u = User.objects.get(username="lec-2026-3")
+>>> u.set_password("lecturer@123")
+>>> u.save()
+
+add student:
+python manage.py shell
+from accounts.models import User
+User.objects.all()
+u = User.objects.get(username="ugr-2026-2")
+u.set_password("student@123")
+u.save()
+
+
+u = User.objects.create_user(
+    username="ugr-2026-2",
+    email="amulyarevankar@gmail.com",
+    password="student@123",
+    role="student"
+)
+u.is_active
+
+
+python manage.py createsuperuser
