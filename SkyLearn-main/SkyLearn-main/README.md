@@ -60,10 +60,6 @@ If you would like to contribute, simply begin by implementing one from the list 
 
 - Clone the repo with
 
-```bash
-git clone https://github.com/SkyCascade/SkyLearn.git
-```
-
 - Create and activate a python virtual environment
 
 ```bash
@@ -88,8 +84,6 @@ python manage.py runserver
 
 Last but not least, go to this address http://127.0.0.1:8000
 
-# References
 
-- Quiz part: https://github.com/tomwalker/django_quiz
 
 #### Show your support by ⭐️ this project!
